@@ -6,19 +6,22 @@ import About from "./Components/About";
 import Projects from "./Components/Projects";
 import Skills from "./Components/Skills";
 import Contact from "./Contact";
+import Aboutnext from "./Components/Aboutnext";
+import Footer from "./Components/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <div className="h-screen overflow-x-hidden relative">
+      <div className="h-screen overflow-x-hidden ">
         <Navbar/>
         <Home />
-        <About />
+        <Aboutnext />
         <Skills/>
         <Projects />
         <Contact/>
+        <Footer/>
       </div>
     </>
   );

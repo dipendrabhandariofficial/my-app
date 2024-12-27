@@ -29,8 +29,8 @@ const Projects = () => {
   ];
 
   return (
-    <div className="py-16">
-      <div className="text-center mb-8">
+    <div className="py-16 bg-gradient-to-b from-white to-black">
+      <div className="text-center mb-8 ">
         <h2 className="text-4xl font-bold">Projects</h2>
         <p className=" mt-2">These are the projects I've made.</p>
       </div>
