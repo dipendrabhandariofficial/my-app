@@ -9,20 +9,20 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-200 text-white-500 py-6 px-16 h-32">
-      <div className="container  flex flex-row  justify-between">
-        {/* Logo */}
-        <div className="flex gap-12 items-center"> 
+    <footer className="bg-gray-200 text-white-500 py-6 px-6 sm:px-16 h-auto">
+      <div className="container flex flex-col sm:flex-row justify-between items-center sm:items-start">
+        {/* Logo & Navigation Links */}
+        <div className="flex flex-col sm:flex-row gap-12 items-center sm:items-start mb-6 sm:mb-0">
           <div>
             <img
               src="/d_logo.png" // Replace with your logo path
               alt="Logo"
-              className="h-10 " // Adjust height as needed
+              className="h-10"
             />
           </div>
 
           {/* Navigation Links */}
-          <nav className="flex space-x-6 ">
+          <nav className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6 text-center sm:text-left">
             <a href="#home" className="hover:text-orange-500">
               HOME
             </a>
@@ -37,8 +37,9 @@ const Footer = () => {
             </a>
           </nav>
         </div>
+
         {/* Social Media Links */}
-        <div className="flex space-x-4  mt-4">
+        <div className="flex space-x-4 mt-4 sm:mt-0 justify-center sm:justify-start">
           <a
             href="#linkedin"
             className="hover:text-orange-500"

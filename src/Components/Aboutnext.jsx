@@ -1,36 +1,36 @@
 import React from "react";
-import { WiStars } from "react-icons/wi";
 
 const Aboutnext = () => {
   return (
-    <div className="h-[600px] w-full flex bg-gradient-to-br from-white to-blue-100">
-   
-      
-      
-
-      {/* Text Div - Takes the other half and centers the text */}
-      <div className="w-[60%] flex items-center justify-center bg-white-200 z-10 ">
-        <div className="text-center text-black translate-x-[20%] bg-white py-8 px-10">
-          <h1 className="text-3xl font-bold translate-x-2 hover:text-orange-500 hover:underline underline-offset-4">
-            About Me
-          </h1>
-          <p className="text-lg mt-2 text-center">
+    <section
+      id="aboutnext"
+      className="about h-[600px] w-full flex flex-col md:flex-row bg-gradient-to-br from-white to-blue-100"
+    >
+      {/* Text Div */}
+      <div className="w-full md:w-[60%] flex items-center justify-center bg-[#F0F7FF] z-10 px-4 md:px-10">
+        <div className="text-center text-black bg-[#F0F7FF] py-8 px-6 border border-[#F0F7FF] rounded-full transform translate-x-0 lg:translate-x-48">
+          <h1 className="text-2xl md:text-3xl font-bold">About Me</h1>
+          <p className="text-sm md:text-lg mt-2">
             This is a brief description about me, displayed in the text section.
-            . Lorem ipsum dolor sit amet
-            consectetur, adipisicing elit. Facere nostrum saepe iure aut,
-            aliquid provident ea doloremque. Maiores architecto dolorum id,
-            asperiores, recusandae commodi blanditiis accusamus sint eaque
-            placeat similique.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere
+            nostrum saepe iure aut, aliquid provident ea doloremque. Maiores
+            architecto dolorum id, asperiores, recusandae commodi blanditiis
+            accusamus sint eaque placeat similique.
           </p>
           <strong>
-            <i className="mt-4 inline-block pl-8">Ph. No: 9804365848</i>
+            <i className="mt-4 inline-block text-sm">Ph. No: 9804365848</i>
           </strong>
-          <p className="font-mono uppercase text-sm hover:text-orange-500 mt-4 pl-8 focus:underline" > <a href=""> learn more</a></p>
+          <p className="font-mono uppercase text-sm mt-4">
+            <a href="#" className="text-blue-500 hover:underline">
+              Learn more
+            </a>
+          </p>
         </div>
       </div>
-      {/* Image Div - Takes half the width */}
-      <div className="w-[40%]  bg-[url('/up.jpg')] bg-cover bg-center opacity-[0.87]  animate-fadeInUp delay-400  "></div>
-    </div>
+
+      {/* Image Div */}
+      <div className="w-full md:w-[40%] bg-[url('/up.jpg')] bg-cover bg-center opacity-90 animate-fadeInUp delay-400 h-[300px] md:h-[600px]"></div>
+    </section>
   );
 };
 

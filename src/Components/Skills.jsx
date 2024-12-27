@@ -22,7 +22,7 @@ const Skills = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.1 }}
       >
-        <h1 className="text-3xl font-bold translate-x-2 hover:text-orange-500 hover:underline underline-offset-4">
+        <h1 className="text-3xl font-bold translate-x-2 ">
             Skills
           </h1>
         <p className="text-lg mt-4 text-gray-700">

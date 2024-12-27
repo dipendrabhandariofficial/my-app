@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
-
+import { Element } from "react-scroll";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -36,16 +36,17 @@ const Contact = () => {
   };
 
   return (
-    <div className="h-screen w-screen flex flex-col items-center justify-center  text-center">
+    <Element
+      id="contact"
+      className="h-screen w-screen flex flex-col items-center justify-center  text-center bg-gradient-to-b from-orange-100 to-white"
+    >
       {/* Header Section */}
-      <div className="w-[50%] mb-8">
-        <h1 className="text-3xl font-bold hover:text-orange-500 hover:underline underline-offset-4">
-          Contact Me
-        </h1>
+      <div className="w-[50%] mb-8 " id="contact">
+        <h1 className="text-3xl font-bold ">Contact Me</h1>
         <p className="text-sm mt-2">
           Feel free to reach out if you're interested in working together, being
-          friends, or discussing the best matka chai spots! You can also email me
-          at{" "}
+          friends, or discussing the best matka chai spots! You can also email
+          me at{" "}
           <a
             href="mailto:dipendrabhandari0000@gmail.com"
             className="text-blue-500 hover:underline"
@@ -57,21 +58,28 @@ const Contact = () => {
       </div>
 
       {/* Contact Form */}
-      <form
-        className="contact w-[50%] space-y-6"
-        onSubmit={handleSubmit}
-      >
+      <form className="contact w-[50%] space-y-6" onSubmit={handleSubmit}>
         {/* First Name and Last Name */}
-        <div className="flex space-x-4">
-          <input
-            type="text"
-            name="firstName"
-            placeholder="First name"
-            value={formData.firstName}
-            onChange={handleChange}
-            className="border border-gray-400 w-1/2 p-2 rounded-md"
-            required
-          />
+        <div className="flex space-x-4   ">
+          <div className="relative w-1/2">
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              value={formData.firstName}
+              onChange={handleChange}
+              className="peer border border-gray-400 focus:border-transparent w-full p-2 rounded-md focus:outline-none placeholder-transparent"
+              placeholder="First name"
+              required
+            />
+            <label
+              htmlFor="firstName"
+              className="absolute  left-2 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-[-10px] peer-focus:text-sm peer-focus:text-orange-500"
+            >
+              First Name
+            </label>
+          </div>
+
           <input
             type="text"
             name="lastName"
@@ -123,7 +131,7 @@ const Contact = () => {
           Submit
         </button>
       </form>
-    </div>
+    </Element>
   );
 };
 

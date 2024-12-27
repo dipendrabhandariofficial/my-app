@@ -1,69 +1,70 @@
 import React from 'react';
+import { FaCode, FaLink } from 'react-icons/fa';
 
 const Projects = () => {
   const projects = [
     {
-      title: "Pharmacy Management System",
+      title: "k Stocks",
       description:
         "The Pharmacy Management System is a sophisticated web-based platform.",
-      image: "/path/to/image1.jpg", // Replace with actual image paths
-      demoLink: "#",
-      githubLink: "#",
+      image: "src/assets/Screenshot 2024-12-27 114401.png", // Replace with actual image paths
+      demoLink: "https://clonewebsite-smoky.vercel.app/",
+      githubLink: "https://github.com/dipendrabhandariofficial/clonewebsite",
     },
     {
-      title: "Password Generator",
+      title: "Front Page  Generator",
       description:
         "A customizable front-page generator developed using React.",
-      image: "/path/to/image2.jpg", // Replace with actual image paths
-      demoLink: "#",
-      githubLink: "#",
+      image: "src/assets/Screenshot 2024-12-27 121822.png", // Replace with actual image paths
+      demoLink: "https://frontpage-q18nknmau-dipendra-s-projects.vercel.app/",
+      githubLink: "https://github.com/dipendrabhandariofficial/FrontPageGenerator",
     },
     {
-      title: "Hello World",
+      title: "Indo Global Foundation  ",
       description:
         "A project where I cloned a design from Figma to practice front-end skills.",
-      image: "/path/to/image3.jpg", // Replace with actual image paths
+      image: "src/assets/Screenshot 2024-12-27 122529.png", // Replace with actual image paths
       demoLink: "#",
       githubLink: "#",
     },
   ];
 
   return (
-    <div className="py-16 bg-gradient-to-b from-white to-black">
+    <div id='projects' className=" pt-16 pb- bg-gradient-to-b to-orange-100 from-orange-300">
       <div className="text-center mb-8 ">
-        <h2 className="text-4xl font-bold">Projects</h2>
-        <p className=" mt-2">These are the projects I've made.</p>
+        <h2 className="text-4xl font-bold font-[sansserif]">Projects</h2>
+        <p className=" mt-2">These are the projects I've made so far</p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+      <div className="grid grid-cols-1  sm:grid-cols-1 lg:grid-cols-3 gap-8 px-32">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-gray-800 rounded-lg shadow-lg hover:scale-105 transform transition"
+            className="bg-slate-100 rounded-lg shadow-lg hover:scale-105 transform transition overflow-hidden"
           >
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-48 object-cover rounded-t-lg"
+              className="w-full h-48 object-cover  rounded-t-lg hover:scale-105  "
             />
             <div className="p-6">
-              <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-              <p className="text-gray-400 mb-4">{project.description}</p>
-              <div className="flex justify-between">
+              <h3 className="text-2xl mb-2">{project.title}</h3>
+              <p className="text-black mb-4 text-[14px]">{project.description}</p>
+              <div className="flex justify-around">
                 <a
                   href={project.demoLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
+                  className="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition"
                 >
-                  Demo
+                  <FaLink />
                 </a>
                 <a
                   href={project.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600 transition"
+                  className="bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition"
                 >
-                  GitHub
+                  <FaCode />
                 </a>
               </div>
             </div>
