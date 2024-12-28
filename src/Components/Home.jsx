@@ -24,7 +24,7 @@ function Home() {
           <h1 className="text-5xl md:text-7xl font-bold text-black text-center animate-fadeInUp delay-400">
             <span>BHANDARI</span><span className="text-orange-500">.</span>
           </h1>
-          <img className="w-68 h-8 mt-2 animate-fadeInUp " src="src/assets/curve-text-border-wave.png" alt="" />
+          <img className="w-68 h-8 mt-2 animate-fadeInUp " src="curve-text-border-wave.png" alt="" />
           <p className="mt-6 text-2xl md:text-2xl font-extralight text-black text-center animate-fadeInUp delay-600">
            WEB DEVELOPER
           </p>
