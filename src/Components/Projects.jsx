@@ -7,7 +7,7 @@ const Projects = () => {
       title: "k Stocks",
       description:
         "The Pharmacy Management System is a sophisticated web-based platform.",
-      image: "public/kaystock.png", 
+      image: "", 
       demoLink: "https://clonewebsite-smoky.vercel.app/",
       githubLink: "https://github.com/dipendrabhandariofficial/clonewebsite",
     },
