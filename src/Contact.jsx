@@ -42,7 +42,7 @@ const Contact = () => {
     >
       {/* Header Section */}
       <div className="w-[50%] mb-8 " id="contact">
-        <h1 className="text-3xl font-bold ">Contact Me</h1>
+        <h1 className="text-4xl font-bold font-[sansserif] ">Contact Me</h1>
         <p className="text-sm mt-2">
           Feel free to reach out if you're interested in working together, being
           friends, or discussing the best matka chai spots! You can also email
@@ -58,7 +58,10 @@ const Contact = () => {
       </div>
 
       {/* Contact Form */}
-      <form className="contact w-[50%] space-y-6" onSubmit={handleSubmit}>
+      <form
+  className="contact w-full sm:w-[80%] md:w-[70%] lg:w-[50%] space-y-6 px-4"
+  onSubmit={handleSubmit}
+>
         {/* First Name and Last Name */}
         <div className="flex space-x-4   ">
           <div className="relative w-1/2">
