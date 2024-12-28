@@ -7,7 +7,7 @@ const Projects = () => {
       title: "k Stocks",
       description:
         "The Pharmacy Management System is a sophisticated web-based platform.",
-      image: "src/assets/Screenshot 2024-12-27 114401.png", // Replace with actual image paths
+      image: "public/kaystock.png", 
       demoLink: "https://clonewebsite-smoky.vercel.app/",
       githubLink: "https://github.com/dipendrabhandariofficial/clonewebsite",
     },
@@ -15,7 +15,7 @@ const Projects = () => {
       title: "Front Page  Generator",
       description:
         "A customizable front-page generator developed using React.",
-      image: "src/assets/Screenshot 2024-12-27 121822.png", // Replace with actual image paths
+      image: "src/assets/Screenshot 2024-12-27 121822.png", 
       demoLink: "https://frontpage-q18nknmau-dipendra-s-projects.vercel.app/",
       githubLink: "https://github.com/dipendrabhandariofficial/FrontPageGenerator",
     },
@@ -23,19 +23,19 @@ const Projects = () => {
       title: "Indo Global Foundation  ",
       description:
         "A project where I cloned a design from Figma to practice front-end skills.",
-      image: "src/assets/Screenshot 2024-12-27 122529.png", // Replace with actual image paths
+      image: "src/assets/Screenshot 2024-12-27 122529.png",
       demoLink: "#",
       githubLink: "#",
     },
   ];
 
   return (
-    <div id='projects' className=" pt-16 pb- bg-gradient-to-b to-orange-100 from-orange-300">
+    <div id='projects' className=" pt-16  bg-gradient-to-b to-orange-100 from-orange-300">
       <div className="text-center mb-8 ">
         <h2 className="text-4xl font-bold font-[sansserif]">Projects</h2>
         <p className=" mt-2">These are the projects I've made so far</p>
       </div>
-      <div className="grid grid-cols-1  sm:grid-cols-1 lg:grid-cols-3 gap-8 lg:px-32 sm:px-24 md:px-16 ">
+      <div className="flex flex-col md:flex-row gap-8 px-4 sm:px-8 md:px-16 lg:px-32">
         {projects.map((project, index) => (
           <div
             key={index}

@@ -41,7 +41,7 @@ const Contact = () => {
       className="h-screen w-screen flex flex-col items-center justify-center  text-center bg-gradient-to-b from-orange-100 to-white"
     >
       {/* Header Section */}
-      <div className="w-[50%] mb-8 " id="contact">
+      <div className="w-full sm:w-[80%] md:w-[70%] lg:w-[50%] mb-2 " id="contact ">
         <h1 className="text-4xl font-bold font-[sansserif] ">Contact Me</h1>
         <p className="text-sm mt-2">
           Feel free to reach out if you're interested in working together, being
@@ -58,7 +58,7 @@ const Contact = () => {
       </div>
 
       {/* Contact Form */}
-      <form
+   <form
   className="contact w-full sm:w-[80%] md:w-[70%] lg:w-[50%] space-y-6 px-4"
   onSubmit={handleSubmit}
 >
