@@ -7,7 +7,7 @@ const Projects = () => {
       title: "k Stocks",
       description:
         "The Pharmacy Management System is a sophisticated web-based platform.",
-      image: "", 
+      image: "kaystock.png", 
       demoLink: "https://clonewebsite-smoky.vercel.app/",
       githubLink: "https://github.com/dipendrabhandariofficial/clonewebsite",
     },
@@ -15,7 +15,7 @@ const Projects = () => {
       title: "Front Page  Generator",
       description:
         "A customizable front-page generator developed using React.",
-      image: "src/assets/Screenshot 2024-12-27 121822.png", 
+      image: "form.png", 
       demoLink: "https://frontpage-q18nknmau-dipendra-s-projects.vercel.app/",
       githubLink: "https://github.com/dipendrabhandariofficial/FrontPageGenerator",
     },
