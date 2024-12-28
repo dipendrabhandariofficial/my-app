@@ -23,7 +23,7 @@ const Projects = () => {
       title: "Indo Global Foundation  ",
       description:
         "A project where I cloned a design from Figma to practice front-end skills.",
-      image: "src/assets/Screenshot 2024-12-27 122529.png",
+      image: "indoglobal.png",
       demoLink: "#",
       githubLink: "#",
     },
