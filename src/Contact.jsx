@@ -38,11 +38,11 @@ const Contact = () => {
   return (
     <Element
       id="contact"
-      className="pt-16 pb-12 w-screen flex flex-col items-center justify-center  text-center bg-gradient-to-b from-orange-100 to-white"
+      className=" pb-12 w-screen flex flex-col items-center justify-center  text-center bg-gradient-to-b from-orange-100 to-white"
     >
       {/* Header Section */}
-      <div className="w-full sm:w-[80%] md:w-[70%] lg:w-[50%] mb-2 " id="contact ">
-        <h1 className="text-4xl font-bold font-[sansserif] ">Contact Me</h1>
+      <div className="w-full pt-12 sm:w-[80%] md:w-[70%] lg:w-[50%] mb-2 " id="contact ">
+        <h1 className="text-4xl font-bold font-[sansserif] pt-8 ">Contact Me</h1>
         <p className="text-sm mt-2">
           Feel free to reach out if you're interested in working together, being
           friends, or discussing the best matka chai spots! You can also email
