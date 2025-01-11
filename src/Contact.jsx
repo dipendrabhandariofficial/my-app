@@ -49,91 +49,126 @@ const Contact = () => {
           me at{" "}
           <a
             href="mailto:dipendrabhandari0000@gmail.com"
-            className="text-blue-500 hover:underline"
+            className="text-blue-500 hover:underline "
           >
             dipendrabhandari0000@gmail.com
           </a>
-          . All fields are required!
         </p>
       </div>
 
       {/* Contact Form */}
-   <form
+      <form
   className="contact w-full sm:w-[80%] md:w-[70%] lg:w-[50%] space-y-6 px-4"
   onSubmit={handleSubmit}
 >
-        {/* First Name and Last Name */}
-        <div className="flex space-x-4   ">
-          <div className="relative w-1/2">
-            <input
-              type="text"
-              id="firstName"
-              name="firstName"
-              value={formData.firstName}
-              onChange={handleChange}
-              className="peer border border-gray-400 focus:border-transparent w-full p-2 rounded-md focus:outline-none placeholder-transparent"
-              placeholder="First name"
-              required
-            />
-            <label
-              htmlFor="firstName"
-              className="absolute  left-2 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-[-10px] peer-focus:text-sm peer-focus:text-orange-500"
-            >
-              First Name
-            </label>
-          </div>
+  {/* First Name and Last Name */}
+  <div className="flex space-x-4">
+    <div className="relative w-1/2">
+      <input
+        type="text"
+        id="firstName"
+        name="firstName"
+        value={formData.firstName}
+        onChange={handleChange}
+        className="peer border border-gray-400 focus:border-transparent w-full p-2 rounded-md focus:outline-none placeholder-transparent"
+        placeholder="First Name"
+        required
+      />
+      <label
+        htmlFor="firstName"
+        className="absolute left-2 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-[-10px] peer-focus:text-sm peer-focus:text-orange-500"
+      >
+        First Name
+      </label>
+    </div>
+    <div className="relative w-1/2">
+      <input
+        type="text"
+        id="lastName"
+        name="lastName"
+        value={formData.lastName}
+        onChange={handleChange}
+        className="peer border border-gray-400 focus:border-transparent w-full p-2 rounded-md focus:outline-none placeholder-transparent"
+        placeholder="Last Name"
+        required
+      />
+      <label
+        htmlFor="lastName"
+        className="absolute left-2 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-[-10px] peer-focus:text-sm peer-focus:text-orange-500"
+      >
+        Last Name
+      </label>
+    </div>
+  </div>
 
-          <input
-            type="text"
-            name="lastName"
-            placeholder="Last name"
-            value={formData.lastName}
-            onChange={handleChange}
-            className="border border-gray-400 w-1/2 p-2 rounded-md"
-            required
-          />
-        </div>
+  {/* Email */}
+  <div className="relative">
+    <input
+      type="email"
+      id="email"
+      name="email"
+      value={formData.email}
+      onChange={handleChange}
+      className="peer border border-gray-400 focus:border-transparent w-full p-2 rounded-md focus:outline-none placeholder-transparent"
+      placeholder="Email"
+      required
+    />
+    <label
+      htmlFor="email"
+      className="absolute left-2 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-[-10px] peer-focus:text-sm peer-focus:text-orange-500"
+    >
+      Email
+    </label>
+  </div>
 
-        {/* Email */}
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={formData.email}
-          onChange={handleChange}
-          className="border border-gray-400 w-full p-2 rounded-md"
-          required
-        />
+  {/* Subject */}
+  <div className="relative">
+    <input
+      type="text"
+      id="subject"
+      name="subject"
+      value={formData.subject}
+      onChange={handleChange}
+      className="peer border border-gray-400 focus:border-transparent w-full p-2 rounded-md focus:outline-none placeholder-transparent"
+      placeholder="Subject"
+      required
+    />
+    <label
+      htmlFor="subject"
+      className="absolute left-2 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-[-10px] peer-focus:text-sm peer-focus:text-orange-500"
+    >
+      Subject
+    </label>
+  </div>
 
-        {/* Subject */}
-        <input
-          type="text"
-          name="subject"
-          placeholder="Subject"
-          value={formData.subject}
-          onChange={handleChange}
-          className="border border-gray-400 w-full p-2 rounded-md"
-          required
-        />
+  {/* Message */}
+  <div className="relative">
+    <textarea
+      id="message"
+      name="message"
+      value={formData.message}
+      onChange={handleChange}
+      className="peer border border-gray-400 focus:border-transparent w-full p-2 rounded-md focus:outline-none placeholder-transparent h-32 resize-none"
+      placeholder="Message"
+      required
+    ></textarea>
+    <label
+      htmlFor="message"
+      className="absolute left-2 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-[-10px] peer-focus:text-sm peer-focus:text-orange-500"
+    >
+      Message
+    </label>
+  </div>
 
-        {/* Message */}
-        <textarea
-          name="message"
-          placeholder="Message"
-          value={formData.message}
-          onChange={handleChange}
-          className="border border-gray-400 w-full p-2 rounded-md h-32 resize-none"
-          required
-        ></textarea>
+  {/* Submit Button */}
+  <button
+    type="submit"
+    className="bg-orange-500 text-white py-2 px-4 rounded-md hover:bg-[#8A3D03] transition"
+  >
+    Submit
+  </button>
+</form>
 
-        {/* Submit Button */}
-        <button
-          type="submit"
-          className="bg-orange-500 text-white py-2 px-4 rounded-md hover:bg-[#8A3D03] transition"
-        >
-          Submit
-        </button>
-      </form>
     </Element>
   );
 };

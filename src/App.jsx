@@ -12,11 +12,12 @@ function App() {
 
   return (
     <>
-      <div className="h-full max-w-screen overflow-x-hidden ">
+      <div className="h-full max-w-screen overflow-x-hidden  ">
         <Navbar/>
         <Home />
         <Aboutnext />
         <Projects />
+        {/* <Skills/> */}
         <Contact/>
         <Footer/>
       </div>
