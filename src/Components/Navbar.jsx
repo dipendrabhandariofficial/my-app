@@ -34,7 +34,7 @@ const Navbar = () => {
               <Link
                 to={item}
                 smooth
-                offset={-10}
+                offset={-20}
                 duration={800}
                 spy
                 activeClass="text-orange-500"

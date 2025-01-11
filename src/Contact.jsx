@@ -38,7 +38,7 @@ const Contact = () => {
   return (
     <Element
       id="contact"
-      className="h-auto w-screen flex flex-col items-center justify-center  text-center bg-gradient-to-b from-orange-100 to-white"
+      className="pt-16 pb-12 w-screen flex flex-col items-center justify-center  text-center bg-gradient-to-b from-orange-100 to-white"
     >
       {/* Header Section */}
       <div className="w-full sm:w-[80%] md:w-[70%] lg:w-[50%] mb-2 " id="contact ">

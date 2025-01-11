@@ -52,7 +52,7 @@ const Aboutnext = () => {
   return (
     <section
       id="aboutnext"
-      className="about h-auto w-full flex flex-col md:flex-row bg-gradient-to-br from-white to-blue-100"
+      className="about  h-auto w-full flex flex-col md:flex-row bg-gradient-to-br from-white to-blue-100"
     >
       {/* Text Div */}
       <div  ref={textRef} className=" textRef w-full md:w-[60%] flex items-center justify-center bg-[#F0F7FF] z-10 px-4 md:px-10">
@@ -81,9 +81,9 @@ const Aboutnext = () => {
       {/* Image Div */}
       <div
         ref={imageRef}
-        className="w-full md:w-[40%] opacity-90 h-[300px] md:h-[600px]"
+        className="w-full md:w-[40%] opacity-90 h-[300px] md:h-[600px]  "
       >
-        <img className="h-full w-full object-cover" src="up.jpg" alt="Image Description" />
+        <img className="h-full  w-full object-cover" src="up.jpg" alt="Image Description" />
       </div>
     </section>
   );

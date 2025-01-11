@@ -84,7 +84,7 @@ const Footer = () => {
             <FaLinkedin size={20} />
           </a>
           <a
-            href="https://github.com/"
+            href="https://github.com/dipendrabhandariofficial"
             className="hover:text-orange-500"
             aria-label="GitHub"
             target="_blank"
