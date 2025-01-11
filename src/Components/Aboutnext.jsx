@@ -52,13 +52,13 @@ const Aboutnext = () => {
   return (
     <section
       id="aboutnext"
-      className="about h-[600px] w-full flex flex-col md:flex-row bg-gradient-to-br from-white to-blue-100"
+      className="about h-auto w-full flex flex-col md:flex-row bg-gradient-to-br from-white to-blue-100"
     >
       {/* Text Div */}
       <div  ref={textRef} className=" textRef w-full md:w-[60%] flex items-center justify-center bg-[#F0F7FF] z-10 px-4 md:px-10">
         <div className="text-center text-black bg-[#F0F7FF] py-8 px-6 border border-[#F0F7FF] rounded-full transform translate-x-0 lg:translate-x-48">
           <h1 className="text-2xl md:text-3xl font-bold font-[sansserif] ">About Me</h1>
-          <p className="text-sm md:text-lg mt-2  font-sans text-slate-800">
+          <p className="text-sm   mt-2  h-[50%]  text-slate-800">
             Driven and resourceful professional with 
             a Bachelor's degree in Information Management. I enjoy working on creative projects, 
             such as building responsive websites using modern tools like React and Tailwind CSS.

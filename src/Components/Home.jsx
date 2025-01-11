@@ -2,6 +2,15 @@ import React from "react";
 import { FaRegLightbulb } from "react-icons/fa";
 
 const Home = () => {
+  const generatedocument = () => {
+    const pdfUrl = "Dipendra Bhandari.pdf";
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "Dipendra Bhandari.pdf"; // specify the filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <div id="home" className="min-h-screen w-full bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4 h-screen flex items-center justify-center">
@@ -48,7 +57,7 @@ const Home = () => {
           <button className="mt-8 px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-400 
                            text-white text-lg rounded-lg transform transition-all duration-300
                            hover:scale-105 hover:shadow-xl hover:shadow-orange-200
-                           active:scale-95">
+                           active:scale-95" onClick={generatedocument}>
             Download Resume
           </button>
         </div>

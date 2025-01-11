@@ -38,7 +38,7 @@ const Contact = () => {
   return (
     <Element
       id="contact"
-      className="h-screen w-screen flex flex-col items-center justify-center  text-center bg-gradient-to-b from-orange-100 to-white"
+      className="h-auto w-screen flex flex-col items-center justify-center  text-center bg-gradient-to-b from-orange-100 to-white"
     >
       {/* Header Section */}
       <div className="w-full sm:w-[80%] md:w-[70%] lg:w-[50%] mb-2 " id="contact ">
@@ -58,7 +58,7 @@ const Contact = () => {
 
       {/* Contact Form */}
       <form
-  className="contact w-full sm:w-[80%] md:w-[70%] lg:w-[50%] space-y-6 px-4"
+  className="contact w-full sm:w-[80%] md:w-[70%] lg:w-[50%] space-y-6 px-4 pb-3"
   onSubmit={handleSubmit}
 >
   {/* First Name and Last Name */}
@@ -163,7 +163,7 @@ const Contact = () => {
   {/* Submit Button */}
   <button
     type="submit"
-    className="bg-orange-500 text-white py-2 px-4 rounded-md hover:bg-[#8A3D03] transition"
+    className="bg-orange-500 text-white py-2  px-4 rounded-md hover:bg-[#8A3D03] transition"
   >
     Submit
   </button>
