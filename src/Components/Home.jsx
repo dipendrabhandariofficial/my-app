@@ -26,7 +26,7 @@ const Home = () => {
           <div className="relative inline-block animate-fadeInUp delay-400">
             <h1 className="text-5xl md:text-7xl font-bold">
               <img
-                src="src/assets/one.svg"
+                src="public/one.svg"
                 alt=""
                 className="absolute w-9 -top-5 left-0 animate-float"
               />
