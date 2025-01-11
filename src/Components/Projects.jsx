@@ -51,7 +51,7 @@ const Projects = () => {
       description:
         "A customizable front-page generator developed using React for college project title page",
       image: "/form.png",
-      demoLink: "https://frontpage-q18nknmau-dipendra-s-projects.vercel.app/",
+      demoLink: "https://nccfrontpage.vercel.app/",
       githubLink:
         "https://github.com/dipendrabhandariofficial/FrontPageGenerator",
       className: "bg-[#90CCF4]",
