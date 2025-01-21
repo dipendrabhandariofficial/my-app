@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed  top-0 w-full z-20 px-8 transition-all duration-300 ${
-        scrolled ? "py-4 md:bg-white/90 bg-white backdrop-blur-md shadow-lg" : "py-6 bg-neutral-100 md:bg-[#F5F5F5]"
+        scrolled ? "py-4 md:bg-white/90 bg-white backdrop-blur-md shadow-lg" : "py-6  md:bg-[#F5F5F5] bg-white"
       }`}
     >
       <div className="container mx-auto flex justify-between items-center">
@@ -43,7 +43,7 @@ const Navbar = () => {
         {/* Navbar Links */}
         <ul
           className={`fixed  md:static md:flex md:space-x-8 font-medium bg-white/90 md:bg-transparent top-16 left-0  md:top-auto md:right-auto w-full md:w-auto md:h-full sm:h-auto flex flex-col md:flex-row items-center justify-center transition-transform duration-400 ${
-            menuOpen ? " translate-y-0 bg-white" : " hidden  "
+            menuOpen ? " translate-y-0 bg-white " : " hidden  "
           } `}
         >
           {["home", "about", "projects", "contact"].map((item) => (
