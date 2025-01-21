@@ -42,7 +42,7 @@ const Navbar = () => {
 
         {/* Navbar Links */}
         <ul
-          className={`fixed  md:static md:flex md:space-x-8 font-medium bg-white/90 md:bg-transparent top-16 left-0  md:top-auto md:right-auto w-full md:w-auto md:h-full sm:h-auto flex flex-col md:flex-row items-center justify-center transition-transform duration-400 ${
+          className={`fixed  md:static md:flex md:space-x-8 font-medium bg-white/90 md:bg-transparent backdrop-blur-md  top-16 left-0  md:top-auto md:right-auto w-full md:w-auto md:h-full sm:h-auto flex flex-col md:flex-row items-center justify-center transition-transform duration-400 ${
             menuOpen ? " translate-y-0 bg-white " : " hidden  "
           } `}
         >
