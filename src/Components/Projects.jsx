@@ -68,7 +68,7 @@ const Projects = () => {
   ];
 
   return (
-    <div id="projects" className="pt-16 bg-gradient-to-white from-black to-white pb-12">
+    <div id="projects" className="pt-16 bg-gradient-to-white from-black to-white pb-12"  >
       <div className="text-center mb-8 ">
         <h2 className="text-4xl font-bold font-[sansserif] text-gray-800">
           Projects
