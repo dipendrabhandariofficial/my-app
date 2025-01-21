@@ -27,8 +27,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed  top-0 w-full z-20 px-7 transition-all duration-300 ${
-        scrolled ? "py-4  bg-white/90  shadow-lg" : "py-6  md:bg-neutral-100 bg-white/90"
+      className={`fixed top-0 w-full px-7 transition-all duration-300 z-50 ${
+        scrolled ? "py-4 bg-white shadow-lg" : "py-6 md:bg-neutral-100 bg-white"
       }`}
     >
       <div className="container mx-auto flex justify-between items-center">
@@ -42,9 +42,9 @@ const Navbar = () => {
 
         {/* Navbar Links */}
         <ul
-          className={`fixed  md:static md:flex md:space-x-8 font-medium   top-16 left-0  md:top-auto md:right-auto w-full md:w-auto md:h-full sm:h-auto flex flex-col md:flex-row items-center justify-center transition-transform duration-400 ${
-            menuOpen ? " translate-y-0  bg-white/90 " : " hidden  "
-          } `}
+          className={`fixed md:static md:flex md:space-x-8 font-medium top-16 left-0 w-full md:w-auto bg-white md:bg-transparent flex-col md:flex-row items-center justify-center transition-transform duration-300 ${
+            menuOpen ? "flex" : "hidden"
+          }`}
         >
           {["home", "about", "projects", "contact"].map((item) => (
             <li key={item}>
@@ -73,7 +73,7 @@ const Navbar = () => {
             className="text-3xl text-gray-700"
             onClick={toggleNavbar}
           >
-            {menuOpen ? <MdOutlineClose />: <GiHamburgerMenu />}
+            {menuOpen ? <MdOutlineClose /> : <GiHamburgerMenu />}
           </button>
         </div>
       </div>
