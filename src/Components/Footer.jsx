@@ -12,22 +12,22 @@ import { Link } from "react-scroll";
 const Footer = () => {
   return (
     <footer className="bg-[#D4D9D5] text-white-500 py-6 px-6 sm:px-16 h-auto">
-      <div className="container flex flex-col sm:flex-row justify-between items-center sm:items-start">
-        <div className="flex flex-col sm:flex-row gap-12 items-center sm:items-start  sm:mb-0">
-          <div>
+      <div className="container flex flex-col items-center justify-between sm:flex-row sm:items-start">
+        <div className="flex flex-col items-center justify-between gap-12 sm:flex-row sm:items-start sm:mb-0">
+          <div className="-mt-2">
             <Link
               to="home"
               smooth={true}
               duration={600}
               className="text-2xl font-bold text-orange-500 cursor-pointer"
             >
-              <TbHexagonLetterDFilled className="text-3xl md:text-4xl inline" />
+              <TbHexagonLetterDFilled className="inline text-4xl md:text-4xl" />
             </Link>
           </div>
 
           {/* Navigation Links */}
-          <nav className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6 text-center sm:text-left ">
-            <ul className="flex space-x-6 md:space-x-10 items-center justify-center text-black text-sm md:text-base">
+          <nav className="flex flex-col space-y-2 text-center sm:flex-row sm:space-y-0 sm:space-x-6 sm:text-left ">
+            <ul className="flex items-center justify-center space-x-6 text-sm text-black md:space-x-10 md:text-base">
               <li className="hover:text-orange-500 ">
                 <Link
                   to="home"
@@ -74,7 +74,7 @@ const Footer = () => {
         </div>
 
         {/* Social Media Links */}
-        <div className="flex space-x-4 mt-4 sm:mt-0 justify-center sm:justify-start">
+        <div className="flex justify-center mt-4 space-x-4 sm:mt-0 sm:justify-start">
           <a
             href="https://www.linkedin.com/in/dipendrabhandariofficial/"
             className="hover:text-orange-500"
@@ -120,8 +120,8 @@ const Footer = () => {
       </div>
 
       {/* Bottom Section */}
-      <div className="text-center text-gray-400 mt-4 text-sm mx-10">
-        © {new Date().getFullYear()} <span className="italic bold text-orange-500">Dipendra Bhandari</span>. All Right Reserved.
+      <div className="flex items-center justify-center text-sm text-gray-400">
+        © {new Date().getFullYear()} <span className="italic text-orange-500 bold">Dipendra Bhandari</span>. All Right Reserved.
       </div>
     </footer>
   );

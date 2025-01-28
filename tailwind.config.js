@@ -8,7 +8,7 @@ export default {
     extend: {
       scale: ['hover'],
       animation: {
-        fadeInUp: 'fadeInUp 3s ease-out forwards', // Custom animation
+        fadeInUp: 'fadeInUp 6s ease-out forwards', // Custom animation
       },
       keyframes: {
         fadeInUp: {

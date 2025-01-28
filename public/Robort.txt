@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Disallow admin and private pages
+Disallow: /admin/
+Disallow: /private/
+
+# Block indexing of unnecessary files
+Disallow: /node_modules/
+Disallow: /build/
+Disallow: /temp/
+
+# Sitemap location
+Sitemap: https://dipendrabhandari.vercel.app/sitemap.xml

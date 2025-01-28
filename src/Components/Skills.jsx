@@ -14,10 +14,10 @@ const Skills = () => {
   ];
 
   return (
-    <div className="h-screen w-screen px-10 py-10 bg-gradient-to-b from-white to-slate-300 overflow-hidden">
+    <div className="w-screen h-auto px-10 py-10 overflow-hidden bg-gradient-to-b from-white to-slate-300">
       {/* Section Title */}
       <motion.div
-        className="text-center mb-8"
+        className="mb-8 text-center"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.1 }}
@@ -25,17 +25,17 @@ const Skills = () => {
         <h1 className="text-3xl font-bold translate-x-2 ">
             Skills
           </h1>
-        <p className="text-lg mt-4 text-gray-700">
+        <p className="mt-4 text-lg text-gray-700">
           These are the skills I have learned so far...
         </p>
       </motion.div>
 
       {/* Skills Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
         {skills.map((skill, index) => (
           <motion.div
             key={index}
-            className="p-6 rounded-xl shadow-md bg-gradient-to-t from-orange-50 to-white hover:shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
+            className="p-6 transition-all duration-300 ease-in-out transform shadow-md rounded-xl bg-gradient-to-t from-orange-50 to-white hover:shadow-lg hover:scale-105"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             whileHover={{
