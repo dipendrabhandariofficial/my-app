@@ -27,15 +27,15 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full px-7 transition-all duration-300 z-50 ${
+      className={`fixed top-0 w-full px-7 transition-all duration-300 z-50  ${
         scrolled ? "py-4 bg-white shadow-lg" : "py-6 md:bg-neutral-100 bg-white"
       }`}
     >
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container flex items-center justify-between mx-auto ">
         {/* Logo */}
         <Link to="home" smooth={true} duration={800} offset={-80}>
-          <button className="group relative">
-            <TbHexagonLetterDFilled className="text-3xl md:text-4xl text-orange-500 transform transition-transform" />
+          <button className="relative group">
+            <TbHexagonLetterDFilled className="text-3xl text-orange-500 transition-transform transform md:text-4xl" />
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300" />
           </button>
         </Link>
@@ -54,11 +54,12 @@ const Navbar = () => {
                 duration={800}
                 offset={-80} // Adjust offset to account for navbar height
                 spy={true}
+                className={`active:text-orange-500`}
                 hashSpy={true} // Ensures proper section detection
-                activeClass="text-orange-800 font-bold" // Active link styles
+                activeClass="underline font-bold" // Active link styles
                 onClick={() => setMenuOpen(false)} // Close menu on link click
               >
-                <button className="capitalize relative group text-gray-700 hover:text-orange-500 transition-colors">
+                <button className="relative text-gray-700 capitalize transition-colors group hover:text-orange-500">
                   {item}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300" />
                 </button>

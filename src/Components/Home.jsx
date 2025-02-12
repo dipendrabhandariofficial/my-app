@@ -16,7 +16,7 @@ const Home = () => {
   };
 
   return (
-    <div id="home" className="w-full min-h-screen  bg-neutral-100">
+    <div id="home" className="w-full min-h-screen bg-neutral-100">
       <div className="container flex items-center justify-center h-screen px-4 mx-auto ">
         <div className="relative space-y-4 text-center">
           {/* Decorative background elements */}
@@ -28,19 +28,20 @@ const Home = () => {
           </h1>
 
           <div className="relative inline-block animate-fadeInUp delay-400">
-            <h1 className="text-5xl font-bold text-gray-900 md:text-7xl">
-              <img
-                src="/one.png"
-                alt=""
-                className="absolute left-0 w-9 -top-5 animate-float"
-              />
-              I AM{"  "}
-              <span className="text-orange-500">
-                <span className="italic">D</span>IPENDRA
-              </span>
-              <FaRegLightbulb className="absolute w-auto h-10 text-orange-500 -top-4 -right-6 animate-glow" />
-            </h1>
-          </div>
+  <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl md:text-6xl lg:text-7xl">
+    <img
+      src="/one.png"
+      alt=""
+      className="absolute left-0 w-6 sm:w-8 md:w-9 lg:w-10 -top-4 sm:-top-5 animate-float"
+    />
+    I AM{" "}
+    <span className="text-orange-500">
+      <span className="italic">D</span>IPENDRA
+    </span>
+    <FaRegLightbulb className="absolute h-6 text-orange-500 sm:h-8 md:h-10 -top-3 sm:-top-7 -right-4 sm:-right-6 animate-glow" />
+  </h1>
+</div>
+
 
           <h1 className="text-5xl font-bold text-gray-900 md:text-7xl animate-fadeInUp delay-600">
             BHANDARI<span className="text-orange-500">.</span>

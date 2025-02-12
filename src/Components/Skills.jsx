@@ -1,63 +1,75 @@
+import { div } from "framer-motion/client";
 import React from "react";
-import { FaGithub, FaHtml5 } from "react-icons/fa";
-import { RiCss3Fill, RiJavascriptFill, RiReactjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { motion } from "framer-motion";
 
-const Skills = () => {
+
+const Skill = () => {
+  
   const skills = [
-    { name: "HTML", icon: <FaHtml5 />, color: "text-orange-500" },
-    { name: "CSS", icon: <RiCss3Fill />, color: "text-blue-500" },
-    { name: "React", icon: <RiReactjsFill />, color: "text-blue-400" },
-    { name: "Tailwind", icon: <RiTailwindCssFill />, color: "text-teal-400" },
-    { name: "JavaScript", icon: <RiJavascriptFill />, color: "text-yellow-400" },
-    { name: "GitHub", icon: <FaGithub />, color: "text-gray-500" },
+    { name: "HTML", percentage: 95, description:"Proficient in semantic HTML5, ensuring accessibility and SEO" },
+    { name: "JavaScript", percentage: 60  , description:" Proficient in writing clean, efficient code for dynamic web applications" },
+    { name: "Tailwind", percentage: 70, description:"Efficient in utility-first design, creating responsive, customizable UIs" },
+    { name: "React", percentage: 80, description:" Experienced with functional components, hooks, and React Router" },
+    { name: "GitHub", percentage: 55, description:"  Skilled in version control, branching, pull requests, and collaboration" },
+    
   ];
-
-  return (
-    <div className="w-screen h-auto px-10 py-10 overflow-hidden bg-gradient-to-b from-white to-slate-300">
-      {/* Section Title */}
-      <motion.div
-        className="mb-8 text-center"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.1 }}
-      >
-        <h1 className="text-3xl font-bold translate-x-2 ">
-            Skills
-          </h1>
-        <p className="mt-4 text-lg text-gray-700">
-          These are the skills I have learned so far...
-        </p>
-      </motion.div>
-
-      {/* Skills Grid */}
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
-        {skills.map((skill, index) => (
-          <motion.div
-            key={index}
-            className="p-6 transition-all duration-300 ease-in-out transform shadow-md rounded-xl bg-gradient-to-t from-orange-50 to-white hover:shadow-lg hover:scale-105"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            whileHover={{
-              scale: 1.1,
-              rotate: 1,
-              boxShadow: "0px 10px 30px rgba(0,0,0,0.15)",
-            }}
-            transition={{ delay: index * 0.1, duration: 0.8 }}
-          >
-            <div
-              className={`text-6xl mb-4 ${skill.color} mx-auto flex items-center justify-center`}
-            >
-              {skill.icon}
-            </div>
-            <h3 className="text-xl font-semibold text-center text-orange-500">
-              {skill.name}
-            </h3>
-          </motion.div>
-        ))}
+  
+  const getColor = (percentage) => {
+    if (percentage > 50) return "text-green-500 border-green-500";
+    if (percentage < 50) return "text-yellow-500 border-yellow-500";
+    return "text-red-500 border-red-500";
+  };
+  
+  const SkillProgress = ({ name, percentage,description }) => {
+    return (
+      <div className="flex flex-col items-center w-52">
+        <div className="relative h-24 w-36">
+          <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+            <circle
+              className="text-gray-200"
+              strokeWidth="10"
+              stroke="currentColor"
+              fill="transparent"
+              r="40"
+              cx="50"
+              cy="50"
+              />
+            <circle
+              className={getColor(percentage)}
+              strokeWidth="10"
+              strokeLinecap="round"
+              stroke="currentColor"
+              fill="transparent"
+              r="40"
+              cx="50"
+              cy="50"
+              strokeDasharray="251.2"
+              strokeDashoffset={251.2 - (Math.abs(percentage) / 100) * 251.2}
+            />
+          </svg>
+          <span className="absolute inset-0 flex items-center justify-center text-xl font-bold">
+            {percentage}%
+          </span>
+        </div>
+        <p className="font-semibold">{name}</p>
+        <p className="text-sm text-center text-gray-500">{description}</p>
       </div>
+    );
+  };
+  return (
+   <div className="">
+     <div className="mb-8 text-center">
+        <h2 className="text-4xl font-bold text-gray-800">Skills</h2>
+        <p className="mt-2 text-gray-600">These are the skills I've learned so far</p>
+      </div>
+    
+    <div className="flex flex-wrap justify-center gap-8 p-8 ">
+      {skills.map((skill) => (
+        <SkillProgress key={skill.name} name={skill.name} percentage={skill.percentage} description={skill.description} />
+      ))}
     </div>
+      
+      </div>
   );
 };
 
-export default Skills;
+export default Skill;

@@ -34,7 +34,7 @@ const Contact = () => {
   return (
     <Element
       id="contact"
-      className="flex flex-col items-center justify-center w-screen pb-12 text-center bg-gradient-to-b from-orange-100 to-white"
+      className="flex flex-col items-center justify-center w-screen pb-12 text-center bg-gradient-to-b to-orange-300 from-white"
     >
       {/* Header Section */}
       <div className="w-full pt-12 sm:w-[80%] md:w-[70%] lg:w-[50%] mb-2">
@@ -54,7 +54,7 @@ const Contact = () => {
 
       {/* Contact Form */}
       <form
-        className="contact w-full sm:w-[80%] md:w-[70%] lg:w-[50%] space-y-6 px-4 pb-3"
+        className="contact w-full sm:w-[80%] md:w-[70%] lg:w-[50%] space-y-6 px-4 py-4"
         onSubmit={handleSubmit}
       >
         {/* First Name and Last Name */}
@@ -67,7 +67,7 @@ const Contact = () => {
                 name={name}
                 value={formData[name]}
                 onChange={handleChange}
-                className="w-full p-2 border border-gray-400 rounded-md peer focus:outline-none"
+                className="w-full p-2 border border-white rounded-md peer focus:outline-none"
                 required
               />
               <label
@@ -92,7 +92,7 @@ const Contact = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="w-full p-2 border border-gray-400 rounded-md peer focus:outline-none"
+            className="w-full p-2 border border-white rounded-md peer focus:outline-none"
             required
           />
           <label
@@ -115,7 +115,7 @@ const Contact = () => {
             name="subject"
             value={formData.subject}
             onChange={handleChange}
-            className="w-full p-2 border border-gray-400 rounded-md peer focus:outline-none"
+            className="w-full p-2 border border-white rounded-md peer focus:outline-none"
             required
           />
           <label
@@ -137,7 +137,7 @@ const Contact = () => {
             name="message"
             value={formData.message}
             onChange={handleChange}
-            className="w-full h-32 p-2 border border-gray-400 rounded-md resize-none peer focus:outline-none "
+            className="w-full h-32 p-2 border border-white rounded-md resize-none peer focus:outline-none "
             required
           ></textarea>
           <label

@@ -40,7 +40,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false); // Stop showing preloader after 2 seconds (or any duration)
-    }, 3000);
+    }, 1000);
 
     return () => clearTimeout(timer); // Cleanup timer on component unmount
   }, []);
@@ -56,7 +56,7 @@ function App() {
             <Home />
             <Aboutnext />
             <Projects />
-            {/* <Skills /> */}
+            <Skills />
             <Contact />
             <Footer />
           </>
