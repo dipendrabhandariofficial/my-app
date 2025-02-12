@@ -52,7 +52,7 @@ const Aboutnext = () => {
   return (
     <section
       id="aboutnext"
-      className="about  h-auto w-full flex flex-col md:flex-row bg-gradient-to-br from-white to-blue-100"
+      className="flex flex-col w-full h-auto about md:flex-row bg-gradient-to-br from-white to-blue-100"
     >
       {/* Text Div */}
       <div  ref={textRef} className=" textRef w-full md:w-[60%] flex items-center justify-center bg-[#F0F7FF] z-10 px-4 md:px-10">
@@ -68,9 +68,9 @@ const Aboutnext = () => {
              the field of IT, management, or Entertainmet. Let's connect and create something extraordinary!
           </p>
           <strong>
-            <i className="mt-4 inline-block text-sm">Ph. No: 9804365848</i>
+            <i className="inline-block mt-4 text-sm">Ph. No: 9804365848</i>
           </strong>
-          <p className="font-mono uppercase text-sm mt-4">
+          <p className="mt-4 font-mono text-sm uppercase">
             {/* <a href="#" className="text-blue-500 hover:underline">
               Learn more
             </a> */}
@@ -83,7 +83,7 @@ const Aboutnext = () => {
         ref={imageRef}
         className="w-full md:w-[40%] opacity-90 h-[300px] md:h-[600px]  "
       >
-        <img className="h-full  w-full object-cover" src="up.jpg" alt="Image Description" />
+        <img className="object-cover w-full h-full" src="up.jpg" alt="Image Description" />
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useState} from "react";
 import { FaRegLightbulb } from "react-icons/fa";
+
 
 import "./animation.css";
 import "locomotive-scroll/dist/locomotive-scroll.css";
@@ -14,8 +15,41 @@ const Home = () => {
     link.click();
     document.body.removeChild(link);
   };
+  const words = ["Bhandari"];
+  const [text, setText] = useState('');
+  const [index, setIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const type = () => {
+      const currentWord = words[index];
+      
+      if (isDeleting) {
+        setText(currentWord.substring(0, charIndex - 1));
+        setCharIndex(charIndex - 1);
+        
+        if (charIndex === 0) {
+          setIsDeleting(false);
+          setIndex((prevIndex) => (prevIndex + 1) % words.length);
+        }
+      } else {
+        setText(currentWord.substring(0, charIndex + 1));
+        setCharIndex(charIndex + 1);
+        
+        if (charIndex === currentWord.length) {
+          setIsDeleting(true);
+        }
+      }
+    };
+
+    const timeout = setTimeout(type, 500);
+
+    return () => clearTimeout(timeout); // Cleanup on component unmount
+  }, [charIndex, isDeleting, index, words]);
 
   return (
+    
     <div id="home" className="w-full min-h-screen bg-neutral-100">
       <div className="container flex items-center justify-center h-screen px-4 mx-auto ">
         <div className="relative space-y-4 text-center">
@@ -44,7 +78,7 @@ const Home = () => {
 
 
           <h1 className="text-5xl font-bold text-gray-900 md:text-7xl animate-fadeInUp delay-600">
-            BHANDARI<span className="text-orange-500">.</span>
+          {text}<span className="text-orange-500">.</span>
           </h1>
 
           <img

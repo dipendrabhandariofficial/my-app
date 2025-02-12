@@ -1,4 +1,4 @@
-import { div } from "framer-motion/client";
+import { motion } from "framer-motion";
 import React from "react";
 
 
@@ -21,7 +21,8 @@ const Skill = () => {
   
   const SkillProgress = ({ name, percentage,description }) => {
     return (
-      <div className="flex flex-col items-center w-52">
+      <div className="flex flex-col items-center w-52 ">
+            
         <div className="relative h-24 w-36">
           <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
             <circle
@@ -51,15 +52,20 @@ const Skill = () => {
           </span>
         </div>
         <p className="font-semibold">{name}</p>
-        <p className="text-sm text-center text-gray-500">{description}</p>
+        <p className="text-sm text-center text-black">{description}</p>
       </div>
     );
   };
   return (
-   <div className="">
+    <>
+   <motion.div className=" bg-gradient-to-b to-purple-800 from-pink-800"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}>
+            
      <div className="mb-8 text-center">
-        <h2 className="text-4xl font-bold text-gray-800">Skills</h2>
-        <p className="mt-2 text-gray-600">These are the skills I've learned so far</p>
+        <h2 className="text-4xl font-bold text-black">Skills</h2>
+        <p className="mt-2 text-black">These are the skills I've learned so far</p>
       </div>
     
     <div className="flex flex-wrap justify-center gap-8 p-8 ">
@@ -68,7 +74,8 @@ const Skill = () => {
       ))}
     </div>
       
-      </div>
+      </motion.div>
+      </>
   );
 };
 

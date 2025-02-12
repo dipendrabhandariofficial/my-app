@@ -10,6 +10,7 @@ import Footer from "./Components/Footer";
 import Lenis from "@studio-freight/lenis";
 import Preloader from "./Components/Preloader";
 
+
 function App() {
   const [loading, setLoading] = useState(true); // State for preloader
 
@@ -47,7 +48,7 @@ function App() {
 
   return (
     <>
-      <div className="h-full overflow-x-hidden max-w-screen">
+      <div className="w-screen h-full overflow-x-hidden max-w-screen">
         {loading ? (
           <Preloader />
         ) : (

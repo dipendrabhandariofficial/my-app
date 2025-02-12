@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
-import { Element } from "react-scroll";
+import {motion} from "framer-motion";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -32,10 +32,14 @@ const Contact = () => {
   };
 
   return (
-    <Element
+    <>
+    <motion.div
       id="contact"
-      className="flex flex-col items-center justify-center w-screen pb-12 text-center bg-gradient-to-b to-orange-300 from-white"
-    >
+      className="flex flex-col items-center justify-center w-screen pb-12 text-center bg-gradient-to-b to-pink-800 from-purple-800"
+       initial={{ opacity: 0 }}
+       whileInView={{ opacity: 1 }}
+       transition={{ duration: 0.6 }}>
+    
       {/* Header Section */}
       <div className="w-full pt-12 sm:w-[80%] md:w-[70%] lg:w-[50%] mb-2">
         <h1 className="text-4xl font-bold font-[sansserif] pt-8">Contact Me</h1>
@@ -160,7 +164,8 @@ const Contact = () => {
           Submit
         </button>
       </form>
-    </Element>
+    </motion.div>
+    </>
   );
 };
 
