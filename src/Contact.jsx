@@ -49,7 +49,7 @@ const Contact = () => {
           me at{" "}
           <a
             href="mailto:dipendrabhandari0000@gmail.com"
-            className="text-blue-500 hover:underline"
+            className="text-orange-500 hover:underline"
           >
             dipendrabhandari0000@gmail.com
           </a>

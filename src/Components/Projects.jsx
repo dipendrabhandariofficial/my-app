@@ -39,14 +39,14 @@ const Projects = () => {
       description:
         "A minimal and interactive to-do list application built with React and Tailwind CSS. It allows users to add, edit, delete, and mark tasks as complete.",
       image: "/weather.png",
-      demoLink: "https://weathertion.vercel.app/",
-      githubLink: "https://github.com/dipendrabhandariofficial/weather-app",
+      demoLink: "https://listdoto.vercel.app/",
+      githubLink: "https://github.com/dipendrabhandariofficial/to-do-list",
       className: "bg-sky-400",
     },
     {
       title: "Indo Global Foundation",
       description:
-        "A project where I cloned a design from Figma to practice front-end skills. This project is not live.",
+        "A project where I cloned a landing page of Consultancy website to practice front-end skills. This project is not live.",
       image: "/indoglobal.png",
       demoLink: "#",
       githubLink: "#",
@@ -59,7 +59,9 @@ const Projects = () => {
   };
 
   const handlePrevious = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + projects.length) % projects.length);
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + projects.length) % projects.length
+    );
   };
 
   return (
@@ -72,18 +74,25 @@ const Projects = () => {
       >
         <div className="mb-8 text-center">
           <h2 className="text-4xl font-bold text-black">Projects</h2>
-          <p className="mt-2 text-black">These are the projects I've made so far</p>
+          <p className="mt-2 text-black">
+            These are the projects I've made so far
+          </p>
         </div>
 
         <div className="flex items-center justify-center w-full gap-4 sm:p-4">
           {/* Left Small Project */}
-          <motion.div className="w-1/3 mr-[-20px] h-96 opacity-90"
-          initial={{ opacity: 0, x: -300 }} // Start off to the right
-          animate={{ opacity: 1, x: 0 }}    // Animate to the center
-          exit={{ opacity: 0, x: 300 }}    // Exit to the left
-          transition={{ duration: 0.5 }}>
+          <motion.div
+            className="w-1/3 mr-[-20px] h-96 opacity-90"
+            initial={{ opacity: 0, x: -300 }} // Start off to the right
+            animate={{ opacity: 1, x: 0 }} // Animate to the center
+            exit={{ opacity: 0, x: 300 }} // Exit to the left
+            transition={{ duration: 0.3 }}
+          >
             <img
-              src={projects[(currentIndex - 1 + projects.length) % projects.length].image}
+              src={
+                projects[(currentIndex - 1 + projects.length) % projects.length]
+                  .image
+              }
               alt="Previous"
               className="object-cover w-full rounded-lg h-96"
             />
@@ -93,8 +102,8 @@ const Projects = () => {
           <motion.div
             key={currentIndex}
             initial={{ opacity: 0, y: -300 }} // Start off to the right
-            animate={{ opacity: 1, y: 0 }}    // Animate to the center
-            exit={{ opacity: 0, y: 300 }}    // Exit to the left
+            animate={{ opacity: 1, y: 0 }} // Animate to the center
+            exit={{ opacity: 0, y: 300 }} // Exit to the left
             transition={{ duration: 0.7 }}
             className={`sm:w-full md:w-[80%] md:h-[450px] sm:h-auto p-6 rounded-lg shadow-lg z-40 ${projects[currentIndex].className} flex flex-col items-center overflow-hidden`}
           >
@@ -103,8 +112,12 @@ const Projects = () => {
               alt={projects[currentIndex].title}
               className="object-cover w-full h-48 mb-4 rounded-lg"
             />
-            <h3 className="mb-2 text-2xl font-semibold text-center">{projects[currentIndex].title}</h3>
-            <p className="text-black text-[14px] text-center mb-4">{projects[currentIndex].description}</p>
+            <h3 className="mb-2 text-2xl font-semibold text-center">
+              {projects[currentIndex].title}
+            </h3>
+            <p className="text-black text-[14px] text-center mb-4">
+              {projects[currentIndex].description}
+            </p>
             <div className="flex gap-4">
               <a
                 href={projects[currentIndex].demoLink}
@@ -132,9 +145,9 @@ const Projects = () => {
               alt="Next"
               className="object-cover w-full rounded-lg h-96"
               initial={{ opacity: 0, x: 300 }} // Start off to the right
-            animate={{ opacity: 1, x: 0 }}    // Animate to the center
-            exit={{ opacity: 0, x: -300 }}    // Exit to the left
-            transition={{ duration: 0.5 }}
+              animate={{ opacity: 1, x: 0 }} // Animate to the center
+              exit={{ opacity: 0, x: -300 }} // Exit to the left
+              transition={{ duration: 0.3 }}
             />
           </motion.div>
         </div>
