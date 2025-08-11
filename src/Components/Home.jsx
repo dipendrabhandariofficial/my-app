@@ -7,7 +7,7 @@ import "locomotive-scroll/dist/locomotive-scroll.css";
 
 const Home = () => {
   const generatedocument = () => {
-    const pdfUrl = "Dipendra Bhandari.pdf";
+    const pdfUrl = "Dipendra Bhandari_Resume.pdf";
     const link = document.createElement("a");
     link.href = pdfUrl;
     link.download = "Dipendra Bhandari.pdf";
