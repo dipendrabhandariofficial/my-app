@@ -46,7 +46,7 @@ const Navbar = () => {
             menuOpen ? "flex" : "hidden"
           }`}
         >
-          {["home", "about", "projects", "contact"].map((item) => (
+          {["home", "about", "project", "contact"].map((item) => (
             <li key={item}>
               <Link
                 to={item}
